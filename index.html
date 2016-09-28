@@ -1,0 +1,36 @@
+<html>
+
+<head>
+<meta charset="UTF 8">
+<title>assignment3</title>
+</head>
+
+<body>
+
+	<form>
+		Enter subreddit : <input type="text" id="inputSearch">
+		<input type="button" value="Submit" id="btn">
+	</form>
+
+	<script type="template/handlebars" id="info-list-template">
+	{{#each info}}
+		<div class="info">
+			<p>{{score}}</p>
+			<p><a href="{{url}}">{{title}}</a></p>
+			<p>{{commentCount}}</p>
+			<p>{{archived}}</p>
+		</div>
+	{{else}}
+		<p>No data found.</p>
+	{{/each}}
+	</script>
+
+	<script src="jquery-3.1.1.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/4.0.5/handlebars.js"></script>
+	<script type="text/javascript" src="main.js"></script>
+
+<div id="info-list"></div>
+
+</body>
+
+</html>
